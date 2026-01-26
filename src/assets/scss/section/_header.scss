@@ -1,10 +1,15 @@
 .header__logo{
     border-bottom: 1px solid #222;
+
+    @media (max-width:800px){
+        border-bottom: 0;
+    }
+
     a{
         display: flex;
         padding: 10px;
         margin: 10px;
-       
+
         em{
             width: 40px;
             height: 40px;
@@ -31,25 +36,25 @@
 
         border-bottom: 1px solid var(--black200);
 
+
         li{
-    
             margin-bottom: 5px;
             a{
                 font-size: 1rem;
                 display: block;
                 padding: 0.9rem 2rem 0.9rem 3.125rem;
-                margin: 0 0.625rem;
+                margin:0 0.625rem;
                 border-radius: 40px;
                 position: relative;
                 line-height: 1;
                 transition: all 0.3s;
 
                 svg{
-                width: 1.25rem;
-                height: 1.25rem;
-                position: absolute;
-                left: 1.25rem;
-                top: 0.75rem;
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    position: absolute;
+                    left: 1.25rem;
+                    top:0.75rem;
                 }
 
                 &:hover{
@@ -57,12 +62,10 @@
                     color: var(--white);
                 }
             }
-
-         &.active a{
+        &.active a{
             background-color: var(--black100);
             color: var(--white);
-         }   
-            
+        }
         }
     }
 
@@ -74,7 +77,7 @@
             a{
                 display: inline-block;
                 padding: 5px 15px;
-                border : 1px solid var(--black200);
+                border: 1px solid var(--black200);
                 font-size: 0.8rem;
                 border-radius: 40px;
                 margin: 3px 1px;
@@ -82,17 +85,14 @@
 
                 &:hover{
                     background-color: var(--black100);
-                    color: var(--white);
+                    color: var(--white);                    
                 }
-
             }
 
             &.active a {
                 background-color: var(--black100);
                 color: var(--white);
             }
-
-            
         }
     }
 }
@@ -108,6 +108,10 @@
     background-color: var(--black);
     backdrop-filter: blur(10px);
 
+    @media (max-width: 800px){
+        display: none;
+    }
+
     li{
         display: inline-block;
 
@@ -116,11 +120,12 @@
             display: inline-block;
         }
     }
+
 }
 
 @keyframes ani{
     0%{
-        transform: rotate(0) scale(1);
+        transform: roate(0) sacle(1);
         border-radius: 0;
     }
 
